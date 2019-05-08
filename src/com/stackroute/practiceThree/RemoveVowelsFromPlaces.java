@@ -19,16 +19,16 @@ import java.util.Scanner;
 public class RemoveVowelsFromPlaces {
 
     public String[] inputPlaces()   {
-        Scanner s=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
     String[] places=new String[6];
     for(int i=0;i<6;i++)
     {
-        places[i]=s.nextLine();
+        places[i]=scanner.nextLine();
     }
     return places;
 }
 
-
+//method to check if there are vowels and then replace them with space
     public void removeVowels(String[] places)  {
         for(String word : places)
         {
@@ -38,6 +38,7 @@ public class RemoveVowelsFromPlaces {
 
     }
 
+    //main method
     public static void main(String[] args) {
         RemoveVowelsFromPlaces vowels=new RemoveVowelsFromPlaces();
         String[] places=vowels.inputPlaces();

@@ -21,35 +21,31 @@ public class ChessBoardPattern {
 
     public static void main(String[] args) {
 
-        Scanner s=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("rows");
-        int rows=s.nextInt();
+        int rows = scanner.nextInt();
         System.out.println("columns");
-        int columns=s.nextInt();
-        String[][] pattern=new String[rows][columns];
+        int columns = scanner.nextInt();
+        String[][] pattern = new String[rows][columns];
 
-        for(int i=0;i<rows;i++)
-        {
-            for(int j=0;j<columns;j++)
-            {
-                if((i+j)%2==0)
-                {
-                    pattern[i][j]="WW/";
-                }
-                else
-                {
-                    pattern[i][j]="BB/";
+        //looping condition for printing chess pattern
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if ((i + j) % 2 == 0) {
+                    pattern[i][j] = "WW/";
+                } else {
+                    pattern[i][j] = "BB/";
                 }
             }
         }
 
-        for(int i=0;i<rows;i++)
-        {
-            for(int j=0;j<columns;j++) {
+        //printing chess pattern
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
 
                 System.out.print(pattern[i][j] + " ");
             }
-     System.out.println(" ");
-            }
+            System.out.println(" ");
+        }
     }
 }

@@ -9,7 +9,7 @@ import javax.naming.LimitExceededException;
 //c. Add a finally clause and print a message to prove you were there
 public class ExceptionClass {
 
-    private static String name="Sheby";
+    private static String name = "Sheby";
 
     public ExceptionClass(String name) {
         this.name = name;
@@ -17,33 +17,30 @@ public class ExceptionClass {
 
     public int getLength() throws LimitExceededException    //method to get length of the string
     {
-        int length=name.length();
+        int length = name.length();
         return length;
     }
 
     public static void main(String[] args) {
-        try{
-            ExceptionClass ex=new ExceptionClass(name);
-            int length=ex.getLength();
+        try {
+            ExceptionClass ex = new ExceptionClass(name);
+            int length = ex.getLength();
 
 
-            if(length>2)        //if length greater than 2 throw exception
+            if (length > 2)        //if length greater than 2 throw exception
                 throw new LimitExceededException(name);
             System.out.println("Inside try block");
 
 
         } catch (Exception LimitExceededException)  //catch limit exceeded exception
-         {
+        {
             System.out.println(name);
             System.out.println("Exception caught");
-        }
-        finally
-        {
+        } finally {
             System.out.println("finally block executed");
         }
-        }
     }
-
+}
 
 
 //
