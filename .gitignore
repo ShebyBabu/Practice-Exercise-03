@@ -133,6 +133,10 @@ Practice03.iml
 # Maven Wrapper
 ######################
 !.mvn/wrapper/maven-wrapper.jar
+
+
+Practice.iml
+.idea
 ######################
 # ESLint
 ######################
